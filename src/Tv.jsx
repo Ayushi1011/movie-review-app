@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { AppContext } from "./context";
 import { Link } from "react-router-dom";
+import Home from "./Home";
 
 function Tv() {
   const { tv } = useContext(AppContext);

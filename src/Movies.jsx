@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "./context";
 import { Link } from "react-router-dom";
+import Home from "./Home";
 
 function Movies() {
   const { movie } = useContext(AppContext);

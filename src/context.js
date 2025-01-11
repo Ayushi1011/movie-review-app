@@ -47,17 +47,24 @@ const AppProvider = ({ children }) => {
     }
   };
 
+  // useEffect(() => {
+  //   if (query) {
+  //     getSearchResults(query);
+  //   } else {
+  //     getMovies();
+  //     getTvShows();
+  //   }
+  // }, [query]);
+
   useEffect(() => {
-    if (query) {
-      getSearchResults(query);
-    } else {
-      getMovies();
-      getTvShows();
-    }
-  }, [query]);
+    getMovies();
+    getTvShows();
+  }, []);
 
   return (
-    <AppContext.Provider value={{ movie, tv, query, setQuery }}>
+    <AppContext.Provider
+      value={{ movie, tv, query, setQuery, getSearchResults }}
+    >
       {children}
     </AppContext.Provider>
   );
