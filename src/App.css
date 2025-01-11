@@ -1,0 +1,133 @@
+body {
+  background-color: #2c2c2c; /* Dark grayish color */
+  color: #fff;
+  overflow-x: hidden; /* Light text color to contrast with the dark background */
+}
+
+.home-background {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url(C:\Users\ADMIN\OneDrive\Documents\EcInfo\Movie\movie-review-app\public\images\tyson-moultrie-BQTHOGNHo08-unsplash.jpg)
+    no-repeat center center fixed;
+  background-size: cover; /* Ensures the background fills the entire screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Centering the content */
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+}
+
+/* Wrapping the content in the center */
+.content-wrapper {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Light semi-transparent background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-radius: 10px;
+  padding: 200px; /* Padding around content */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow around the content */
+  color: white;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  border: 2px solid red; /* Red border around the content */
+}
+
+/* Align buttons side by side */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Add spacing between buttons and search bar */
+}
+
+button {
+  background-color: rgba(231, 33, 33, 0.773);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+button:hover {
+  background-color: rgba(168, 17, 17, 0.551);
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Search bar styling */
+input[type="text"] {
+  width: 100%;
+  max-width: 80%; /* Adjust this value to limit the width of the search box */
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ec0f0f;
+}
+
+.error-message {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ec0f0f;
+}
+
+.movieTv-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card style for individual movies */
+.movieTv-card {
+  background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movieTv-card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* Movie poster styling */
+.movieTv-poster {
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.5); /* Bottom border for poster */
+}
+
+/* Movie title styling */
+.movieTv-title {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
