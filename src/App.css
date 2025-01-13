@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url(C:\Users\ADMIN\OneDrive\Documents\EcInfo\Movie\movie-review-app\public\images\tyson-moultrie-BQTHOGNHo08-unsplash.jpg)
+  background: url("/public/images/tyson-moultrie-BQTHOGNHo08-unsplash.jpg")
     no-repeat center center fixed;
   background-size: cover; /* Ensures the background fills the entire screen */
   display: flex;
@@ -130,4 +130,68 @@ input[type="text"] {
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
+}
+/* Container for the TV Show details */
+.detail-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertically align the image and text */
+  gap: 30px; /* Space between image and details */
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 1200px; /* Optional: Limit container width */
+}
+
+/* Container for the image */
+.image-container {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  width: 300px; /* Increased width for better image visibility */
+}
+
+/* Styling for the image */
+.image-area {
+  width: 100%; /* Take up the full container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for a better visual effect */
+}
+
+/* Container for the details */
+.details-container {
+  flex: 1;
+  max-width: 800px; /* Increased max-width for details */
+  color: white; /* Ensure text is readable on dark backgrounds */
+}
+
+/* Title styling */
+.details-container h1 {
+  font-size: 32px; /* Larger font size for the title */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Paragraph styling */
+.details-container p {
+  font-size: 22px; /* Adjust font size for readability */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 10px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: right;
+}
+
+.header-container .btn {
+  padding: 8px 18px;
+  margin: 10px;
+  height: 40px;
+}
+
+.header-container form {
+  display: flex;
+}
+
+.header-container input[type="text"] {
+  margin: 10px;
 }

@@ -13,15 +13,20 @@ function TvShowDetail() {
   return (
     <>
       <button onClick={() => navigate("/TvShows")}>Back</button>
-      <div>
-        <h1>{tvShowDetail.name}</h1>
-        <img
-          src={`https://image.tmdb.org/t/p/w500${tvShowDetail.poster_path}`}
-          alt={tvShowDetail.name}
-        />
-        <p>{tvShowDetail.overview}</p>
-        <p>First Air Date: {tvShowDetail.first_air_date}</p>
-        <p>Rating: {tvShowDetail.vote_average}</p>
+      <div className="detail-container">
+        <div className="image-container">
+          <img
+            src={`https://image.tmdb.org/t/p/w500${tvShowDetail.poster_path}`}
+            alt={tvShowDetail.name}
+            className="image-area"
+          />
+        </div>
+        <div className="details-container">
+          <h1>{tvShowDetail.name}</h1>
+          <p>{tvShowDetail.overview}</p>
+          <p>First Air Date: {tvShowDetail.first_air_date}</p>
+          <p>Rating: {tvShowDetail.vote_average}</p>
+        </div>
       </div>
     </>
   );

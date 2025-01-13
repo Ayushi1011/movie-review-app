@@ -13,15 +13,20 @@ function MovieDetail() {
   return (
     <>
       <button onClick={() => navigate("/Movies")}>Back</button>
-      <div>
-        <h1>{movieDetail.name}</h1>
-        <img
-          src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`}
-          alt={movieDetail.name}
-        />
-        <p>{movieDetail.overview}</p>
-        <p>First Air Date: {movieDetail.release_date}</p>
-        <p>Rating: {movieDetail.vote_average}</p>
+      <div className="detail-container">
+        <div className="image-container">
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`}
+            alt={movieDetail.name}
+            className="image-area"
+          />
+        </div>
+        <div className="details-container">
+          <h1>{movieDetail.name}</h1>
+          <p>{movieDetail.overview}</p>
+          <p>First Air Date: {movieDetail.release_date}</p>
+          <p>Rating: {movieDetail.vote_average}</p>
+        </div>
       </div>
     </>
   );

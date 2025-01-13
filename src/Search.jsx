@@ -17,7 +17,6 @@ function Search() {
     navigate("/searchResults");
     console.log("Search query: ", query);
   };
-
   return (
     <form>
       <input
