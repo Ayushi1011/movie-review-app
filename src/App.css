@@ -195,3 +195,27 @@ input[type="text"] {
 .header-container input[type="text"] {
   margin: 10px;
 }
+
+h1#topic {
+  text-align: center;
+}
+
+h2#subTopic {
+  background-color: #ec0f0f;
+  text-align: center;
+}
+
+.single-item {
+  display: flex;
+  justify-content: center;
+}
+
+.single-item .movieTv-card {
+  max-width: 300px; /* Limit size for single result */
+  margin: 0 auto; /* Center align */
+}
+
+.single-item .movieTv-poster {
+  width: 100%; /* Ensure poster does not stretch */
+  height: auto;
+}
