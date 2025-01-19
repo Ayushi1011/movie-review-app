@@ -3,7 +3,7 @@ import { AppContext } from "./context";
 import { Link, useNavigate } from "react-router-dom";
 
 function SearchResult() {
-  const { movie, tv, query } = useContext(AppContext);
+  const { movie, tv, query, setQuery } = useContext(AppContext);
   const navigate = useNavigate();
   ///////logic is same if u dont want to repeat the logic create common ////////////
   // const Common = ({ item }) => {
@@ -27,7 +27,14 @@ function SearchResult() {
   return (
     <div>
       <div className="back-button">
-        <button onClick={() => navigate("/Movies")}>Back</button>
+        <button
+          onClick={() => {
+            setQuery("");
+            navigate("/Movies");
+          }}
+        >
+          Back
+        </button>
       </div>
       <h1 id="topic">Search Results for "{query}"</h1>
       <h2 id="subTopic">Movies</h2>
